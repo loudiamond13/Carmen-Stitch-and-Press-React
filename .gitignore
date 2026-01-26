@@ -8,3 +8,4 @@ obj/
 CarmenStitchAndPressReact.Server/Properties/PublishProfiles
 CarmenStitchAndPressReact.Server/Properties/PublishProfiles
 CarmenStitchAndPressReact.Server/appsettings.json
+/CarmenStitchAndPressReact.Server/appsettings.Development.json
