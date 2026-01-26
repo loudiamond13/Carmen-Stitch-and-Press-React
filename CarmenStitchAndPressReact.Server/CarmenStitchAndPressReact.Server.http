@@ -1,0 +1,6 @@
+@CarmenStitchAndPressReact.Server_HostAddress = http://localhost:5216
+
+GET {{CarmenStitchAndPressReact.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

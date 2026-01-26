@@ -1,0 +1,40 @@
+
+@import "../node_modules/bootstrap/scss/_functions.scss";
+
+
+$white: #ffffff;
+
+$theme-colors: ( 
+    "light": #f6dfd1, 
+    "dark": #d4bbab, 
+    "primary": #1b87dd, 
+    "secondary": #5665eb, 
+    "info": #ffb62f, 
+    "success": #00bb69, 
+    "warning": #ebd100, 
+    "danger": #ff0b00, 
+    "darker":#572e2b 
+);
+
+//active navbar styles
+$component-active-color: #f6dfd1; // Text color when active
+$component-active-bg: #572e2b; // Background color when active ##572e2b
+
+//custom nav-link color
+$link-color: #572e2b; // example custom color
+
+//link hover color
+$link-hover-color: darken($link-color, 15%);
+
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+    //PT Sans
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
