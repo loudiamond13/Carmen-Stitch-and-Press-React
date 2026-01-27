@@ -12,12 +12,14 @@ namespace CSP.React.DAL.Repositories.Base
 {
     public abstract class GenericRepository<C, T> : IGenericRepository<T>
         where T : class
-        where C : CarmenStitchAndPressServerDbContext
+        where C : DbContext
     {
         protected readonly C _context;
+        protected readonly DbSet<T> _dbSet;
         protected GenericRepository(C context)
         {
-            _context = context;
+            _context = context?? throw new ArgumentNullException(nameof(context));
+            _dbSet = _context.Set<T>();
         }
 
         public virtual async Task<List<T>> GetAllAsync()

@@ -5,6 +5,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.WebUtilities;
+using System.Net;
+using System.Text;
+using System.Text.Encodings.Web;
 
 namespace CarmenStitchAndPressReact.Server.Controllers
 {
@@ -17,7 +21,7 @@ namespace CarmenStitchAndPressReact.Server.Controllers
         private readonly IEmailSender _emailSender;
 
         public IdentityAPIController(
-            UserManager<CarmenStitchAndPressUserModel> userManager, 
+            UserManager<CarmenStitchAndPressUserModel> userManager,
             SignInManager<CarmenStitchAndPressUserModel> signInManager,
             IEmailSender emailSender
             )
@@ -26,6 +30,8 @@ namespace CarmenStitchAndPressReact.Server.Controllers
             _userManager = userManager;
             _emailSender = emailSender;
         }
+
+        #region Register
         [Authorize(Roles = "Company")]
         [HttpPost]
         [Route("register")]
@@ -49,10 +55,12 @@ namespace CarmenStitchAndPressReact.Server.Controllers
             await _signInManager.SignInAsync(user, isPersistent: false);
             return Ok(new { message = "User registered successfully" });
         }
+        #endregion
 
+        #region Log In
         [HttpPost]
         [Route("login")]
-        public async Task<IActionResult> LogIn([FromBody] LoginRequest loginRequest) 
+        public async Task<IActionResult> LogIn([FromBody] LoginRequest loginRequest)
         {
             try
             {
@@ -69,7 +77,7 @@ namespace CarmenStitchAndPressReact.Server.Controllers
                         var code = new Random().Next(100000, 999999).ToString();
 
                         //avoid sending code twice if there is already one that is not expired (10mins)
-                        if (user.CodeSentAt == null || user.CodeSentAt < DateTime.UtcNow.AddMinutes(-10)) 
+                        if (user.CodeSentAt is null || user.CodeSentAt < DateTime.UtcNow.AddMinutes(-10))
                         {
                             user.LoginVerificationCode = code;
                             user.CodeSentAt = DateTime.UtcNow;
@@ -84,25 +92,27 @@ namespace CarmenStitchAndPressReact.Server.Controllers
                         }
 
                         await _signInManager.SignOutAsync();
-                        return Ok(new {Email= loginRequest.Email, RememberMe= loginRequest.RememberMe });
+                        return Ok(new { Email = loginRequest.Email, RememberMe = loginRequest.RememberMe });
                     }
                     return BadRequest(new { message = "Invalid Email or Password." });
                 }
-                else 
+                else
                 {
-                    return BadRequest(new { message ="Invalid Email or Password." });
+                    return BadRequest(new { message = "Invalid Email or Password." });
                 }
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
-                return BadRequest(new { message = ex.Message});
+                return BadRequest(new { message = ex.Message });
             }
         }
+        #endregion
 
 
+        #region get current user
         [HttpGet]
         [Route("currentUser")]
-        public async Task<IActionResult> CurrentUser() 
+        public async Task<IActionResult> CurrentUser()
         {
             try
             {
@@ -114,7 +124,7 @@ namespace CarmenStitchAndPressReact.Server.Controllers
                 var userName = User.Identity?.Name ?? "";
 
                 var currentUser = await _userManager.FindByEmailAsync(userName);
-                if (currentUser is not null) 
+                if (currentUser is not null)
                 {
                     var roles = await _userManager.GetRolesAsync(currentUser);
 
@@ -129,11 +139,12 @@ namespace CarmenStitchAndPressReact.Server.Controllers
 
                 return Ok(null);
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 return BadRequest(new { message = ex.Message });
             }
         }
+        #endregion
 
         #region log out
         [HttpPost]
@@ -142,7 +153,7 @@ namespace CarmenStitchAndPressReact.Server.Controllers
         {
             try
             {
-                if (User.Identity.IsAuthenticated) 
+                if (User != null && User.Identity.IsAuthenticated) 
                 {
                     await _signInManager.SignOutAsync();
                     return Ok();
@@ -204,6 +215,37 @@ namespace CarmenStitchAndPressReact.Server.Controllers
             {
                 return BadRequest(ex.Message);
             }
+        }
+        #endregion
+
+        #region Forgot Password
+        [HttpPost]
+        [Route("forgotPassword")]
+        public async Task<IActionResult> ForgotPassword([FromBody] string email)
+        {
+
+            var user = await _userManager.FindByEmailAsync(email.Trim());
+            user?.PasswordHash = "";
+
+            if (user is null || (!await _userManager.IsEmailConfirmedAsync(user)))
+            {
+                return Ok();
+            }
+
+            string code = await _userManager.GeneratePasswordResetTokenAsync(user);
+            code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+            string encodedEmail = WebUtility.UrlEncode(email.Trim());
+
+
+            var callbackUrl = $"{Request.Scheme}://{Request.Host}/reset-password?code={code}&email={encodedEmail}";
+
+            await _emailSender.SendEmailAsync(
+                email.Trim(),
+                "Reset CSP Password",
+                $"Please reset your password by <a href='{HtmlEncoder.Default.Encode(callbackUrl!)}'>clicking here</a>."
+                );
+
+            return Ok();
         }
         #endregion
     }

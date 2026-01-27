@@ -1,13 +1,16 @@
 
 import { useEffect } from "react";
-import { useAuth } from "../contexts/AuthContext";
-import type { LoginRequest } from "../types/api-types";
+import { useAuth } from "../../contexts/AuthContext";
+import type { LoginRequest } from "../../types/api-types";
 
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
+import PageTitle from "../../hooks/PageTitle";
 
 
-const Login = () => {
+const LoginPage = () => {
+
+    PageTitle("Login");
 
     const { login,isAuthenticated } = useAuth();
     const navigate = useNavigate();
@@ -82,4 +85,4 @@ const Login = () => {
 
 }
 
-export default Login;
+export default LoginPage;

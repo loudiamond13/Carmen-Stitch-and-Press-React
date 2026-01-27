@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
-import type { VerificationRequest } from "../types/api-types";
+import type { VerificationRequest } from "../../types/api-types";
 import { useLocation } from "react-router-dom";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../../contexts/AuthContext";
 
 
 
@@ -26,7 +26,7 @@ const VerificationPage = () => {
     });
 
     return (
-        <div className="d-flex  justify-content-center align-items-center min-vh-100">
+        <div className="d-flex pt-5 justify-content-center align-items-center">
             <div className="card border-0 shadow rounded-4 bg-dark p-5  ">
             <p className="fs-2">Verification Code</p>
                 <form onSubmit={onSubmit} className="">

@@ -58,7 +58,30 @@ export const verifyCode = async (data: VerificationRequest)  => {
     }
     catch (error:any) {
         if (error.status === 400) {
-            return error.message
+            return error.message;
         }
+    }
+}
+
+// forgot password by email
+export const forgotPassword = async(data:string) => {
+    try {
+         await api.post("/identity/forgotPassword",
+            JSON.stringify(data),
+            {
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+
+      
+    }
+    catch (error: any) {
+        console.log(error);
+        // You can customize the message based on status
+        if (error.response?.status === 404) {
+            throw new Error("Email not found");
+        }
+        throw new Error(error.message || "Something went wrong");
     }
 }

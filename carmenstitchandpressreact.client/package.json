@@ -12,11 +12,12 @@
   "dependencies": {
     "@tanstack/react-query": "^5.83.0",
     "axios": "^1.11.0",
-    "bootstrap": "^5.3.7",
+    "bootstrap": "^5.3.8",
     "jquery": "^3.7.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.61.1",
+    "sass": "^1.97.3",
     "toastr": "^2.1.4"
   },
   "devDependencies": {

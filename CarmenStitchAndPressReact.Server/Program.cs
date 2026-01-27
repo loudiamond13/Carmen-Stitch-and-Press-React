@@ -16,7 +16,7 @@ builder.Services.AddDbContext<CarmenStitchAndPressServerDbContext>(options =>
 );
 
 builder.Services.AddIdentity<CarmenStitchAndPressUserModel, IdentityRole>()
-                .AddEntityFrameworkStores<CarmenStitchAndPressServerDbContext>();
+                .AddEntityFrameworkStores<CarmenStitchAndPressServerDbContext>().AddDefaultTokenProviders();
 
 
 builder.Services.AddTransient<IEmailSender, SmtpEmailSender>();
@@ -25,6 +25,21 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy("CorsPolicy", policy =>
+//    {
+//        policy
+//            .WithOrigins("http://localhost:5173")
+//            .AllowAnyHeader()
+//            .AllowAnyMethod()
+//            .AllowCredentials();
+//    });
+//});
+
+
+
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
@@ -41,6 +56,7 @@ builder.Services.ConfigureApplicationCookie(options =>
 
 
 var app = builder.Build();
+//app.UseCors("CorsPolicy");
 //app.MapIdentityApi<CarmenStitchAndPressUserModel>();
 app.UseDefaultFiles();
 app.UseStaticFiles();

@@ -1,5 +1,8 @@
 
+
 @import "../node_modules/bootstrap/scss/_functions.scss";
+
+
 
 
 $white: #ffffff;
@@ -15,6 +18,33 @@ $theme-colors: (
     "danger": #ff0b00, 
     "darker":#572e2b 
 );
+
+/* Danger/Error */
+.toast-error {
+    background-color: #ff0000 !important;
+    color: #fff !important;
+}
+
+/* Warning */
+.toast-warning {
+    background-color: #ebd100 !important;
+    color: #000 !important;
+}
+
+/* Success */
+.toast-success {
+    background-color: #00bb69 !important;
+    color: #fff !important;
+}
+
+/* Info */
+.toast-info {
+    background-color: #ffb62f !important;
+    color: #000 !important;
+}
+
+
+
 
 //active navbar styles
 $component-active-color: #f6dfd1; // Text color when active
@@ -34,7 +64,26 @@ $link-hover-color: darken($link-color, 15%);
     font-family: 'Ubuntu', sans-serif;
 }
 
+// Toastr overrides
+.toast-success {
+    background-color: #539412 !important;
+    color: #fff !important;
+}
 
+.toast-error {
+    background-color: #e90962 !important;
+    color: #fff !important;
+}
+
+.toast-warning {
+    background-color: #feba4f !important;
+    color: #000 !important;
+}
+
+.toast-info {
+    background-color: #4c68f3 !important;
+    color: #fff !important;
+}
 
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
