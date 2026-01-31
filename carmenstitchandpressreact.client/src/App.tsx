@@ -15,7 +15,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import ForgotPasswordPage from './pages/Identity/ForgotPasswordPage';
 import ResetPasswordPage from './pages/Identity/ResetPasswordPage';
 import LoginPage from "./pages/Identity/LoginPage";
-import useAsyncLoading from './hooks/useAsyncLoading';
+import { useAsyncLoading } from './hooks/useAsyncLoading';
 
 
 function App() {

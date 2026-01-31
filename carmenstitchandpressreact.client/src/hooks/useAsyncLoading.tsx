@@ -7,7 +7,7 @@ type AsyncLoadingContextType = {
 
 const AsyncLoadingContext = createContext<AsyncLoadingContextType | null>(null);
 
-export function AsyncLoadingProvider({ children }: { children: React.ReactNode }) {
+export default function AsyncLoadingProvider({ children }: { children: React.ReactNode }) {
     const [isLoading, setIsLoading] = useState(false);
 
     const runAsync = useCallback(async <T>(promise: Promise<T>) => {
@@ -31,3 +31,5 @@ export function useAsyncLoading() {
     if (!ctx) throw new Error("useAsyncLoading must be used inside AsyncLoadingProvider");
     return ctx;
 }
+
+

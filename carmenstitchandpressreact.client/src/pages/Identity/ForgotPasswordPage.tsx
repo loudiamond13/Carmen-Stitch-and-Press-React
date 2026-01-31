@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { forgotPassword } from "../../api-client";
 import toastr from "toastr";
 import { useNavigate } from "react-router-dom";
-import useAsyncLoading from "../../hooks/useAsyncLoading";
+import { useAsyncLoading } from "../../hooks/useAsyncLoading";
 
 
 type ForgotPasswordRequest = {
