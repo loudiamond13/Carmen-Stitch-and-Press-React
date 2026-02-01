@@ -1,10 +1,6 @@
 [
   {
-    "outputFile": "carmenstitchandpressreact.client/src/test.css",
-    "inputFile": "carmenstitchandpressreact.client/src/test.scss"
-  },
-  {
-    "outputFile": "carmenstitchandpressreact.client/src/test.css",
-    "inputFile": "carmenstitchandpressreact.client/src/test.scss"
+    "outputFile": "carmenstitchandpressreact.client/src/general.css",
+    "inputFile": "carmenstitchandpressreact.client/src/general.scss"
   }
 ]

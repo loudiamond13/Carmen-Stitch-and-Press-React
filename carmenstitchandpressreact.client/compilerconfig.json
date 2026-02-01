@@ -1,6 +1,6 @@
 ﻿[
   {
-    "outputFile": "src/test.css",
-    "inputFile": "src/test.scss"
+    "outputFile": "src/general.css",
+    "inputFile": "src/general.scss"
   }
 ]
