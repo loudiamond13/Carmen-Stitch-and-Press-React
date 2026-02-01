@@ -1,0 +1,17 @@
+
+
+.navbar-toggler:focus,
+navbar-toggler:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+.navbar-toggler span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 4px 0;
+    background-color: #572e2b;
+    border-radius: 1px;
+}

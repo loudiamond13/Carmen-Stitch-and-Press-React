@@ -3,7 +3,7 @@
 //import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { useAuth} from "./contexts/AuthContext"
-import "../src/test.css"
+import "../src/general.css"
 
 import Layout from './layouts/Layout';
 import HomePage from './pages/HomePage';

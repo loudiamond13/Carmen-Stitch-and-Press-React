@@ -1,0 +1,11 @@
+
+
+.sidebar {
+
+
+
+
+    @media (min-width: 991px) {
+        width: 250px;
+    }
+}
