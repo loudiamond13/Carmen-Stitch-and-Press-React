@@ -9,3 +9,6 @@ CarmenStitchAndPressReact.Server/Properties/PublishProfiles
 CarmenStitchAndPressReact.Server/Properties/PublishProfiles
 CarmenStitchAndPressReact.Server/appsettings.json
 /CarmenStitchAndPressReact.Server/appsettings.Development.json
+/carmenstitchandpressreact.client/src/test.css
+/carmenstitchandpressreact.client/src/general.css
+/carmenstitchandpressreact.client/src/general.min.css
