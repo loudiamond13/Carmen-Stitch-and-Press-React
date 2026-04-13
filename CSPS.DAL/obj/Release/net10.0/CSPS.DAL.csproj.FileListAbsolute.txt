@@ -1,0 +1,15 @@
+C:\Users\diamo\Desktop\LouProgramming\CarmenStitchAndPrintingServicesApp\CSPS.DAL\bin\Release\net10.0\CSPS.DAL.deps.json
+C:\Users\diamo\Desktop\LouProgramming\CarmenStitchAndPrintingServicesApp\CSPS.DAL\bin\Release\net10.0\CSPS.DAL.dll
+C:\Users\diamo\Desktop\LouProgramming\CarmenStitchAndPrintingServicesApp\CSPS.DAL\bin\Release\net10.0\CSPS.DAL.pdb
+C:\Users\diamo\Desktop\LouProgramming\CarmenStitchAndPrintingServicesApp\CSPS.DAL\bin\Release\net10.0\CSPS.Domain.dll
+C:\Users\diamo\Desktop\LouProgramming\CarmenStitchAndPrintingServicesApp\CSPS.DAL\bin\Release\net10.0\CSPS.Domain.pdb
+C:\Users\diamo\Desktop\LouProgramming\CarmenStitchAndPrintingServicesApp\CSPS.DAL\obj\Release\net10.0\CSPS.DAL.csproj.AssemblyReference.cache
+C:\Users\diamo\Desktop\LouProgramming\CarmenStitchAndPrintingServicesApp\CSPS.DAL\obj\Release\net10.0\CSPS.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diamo\Desktop\LouProgramming\CarmenStitchAndPrintingServicesApp\CSPS.DAL\obj\Release\net10.0\CSPS.DAL.AssemblyInfoInputs.cache
+C:\Users\diamo\Desktop\LouProgramming\CarmenStitchAndPrintingServicesApp\CSPS.DAL\obj\Release\net10.0\CSPS.DAL.AssemblyInfo.cs
+C:\Users\diamo\Desktop\LouProgramming\CarmenStitchAndPrintingServicesApp\CSPS.DAL\obj\Release\net10.0\CSPS.DAL.csproj.CoreCompileInputs.cache
+C:\Users\diamo\Desktop\LouProgramming\CarmenStitchAndPrintingServicesApp\CSPS.DAL\obj\Release\net10.0\CSPS.DAL.csproj.Up2Date
+C:\Users\diamo\Desktop\LouProgramming\CarmenStitchAndPrintingServicesApp\CSPS.DAL\obj\Release\net10.0\CSPS.DAL.dll
+C:\Users\diamo\Desktop\LouProgramming\CarmenStitchAndPrintingServicesApp\CSPS.DAL\obj\Release\net10.0\refint\CSPS.DAL.dll
+C:\Users\diamo\Desktop\LouProgramming\CarmenStitchAndPrintingServicesApp\CSPS.DAL\obj\Release\net10.0\CSPS.DAL.pdb
+C:\Users\diamo\Desktop\LouProgramming\CarmenStitchAndPrintingServicesApp\CSPS.DAL\obj\Release\net10.0\ref\CSPS.DAL.dll

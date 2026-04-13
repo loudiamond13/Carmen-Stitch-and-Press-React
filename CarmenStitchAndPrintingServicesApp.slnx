@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="carmenstitchandprintingservicesapp.client/carmenstitchandprintingservicesapp.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="CarmenStitchAndPrintingServicesApp.Server/CarmenStitchAndPrintingServicesApp.Server.csproj" />
+  <Project Path="CSPS.DAL/CSPS.DAL.csproj" Id="feb76ee9-f92f-49f6-bcc4-4cff9767a739" />
+  <Project Path="CSPS.Domain/CSPS.Domain.csproj" Id="e3808851-1ab7-4c10-a05d-7c0b05a79f3e" />
+</Solution>
