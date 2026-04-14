@@ -33,8 +33,36 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 10
-    - name: Publish ASP.NET
-      run: dotnet publish -c Release -o ./publish
+    - name: Publish ASP.NET Core (Server)
+      run: |
+          dotnet publish 
+          .\CarmenStitchAndPrintingServicesApp.Server\CarmenStitchAndPrintingServicesApp.Server.csproj 
+          -c Release -o .\publish
+
+    #copy react build into wwwroot
+    - name: Copy React build into wwwroot
+      shell: pwsh
+      run: |
+        $wwwroot = ".\publish\wwwroot"
+        if (!(Test-Path $wwwroot)) { New-Item -ItemType Directory -Path $wwwroot | Out-Null }
+
+
+      
+        $dist  = ".\carmenstitchandprintingservicesapp.client\dist"
+        $build = ".\carmenstitchandprintingservicesapp.client\build"
+
+        if (Test-Path $dist) {
+          Copy-Item "$dist\*" $wwwroot -Recurse -Force
+          Write-Host "Copied dist/ -> publish/wwwroot"
+        }
+        elseif (Test-Path $build) {
+          Copy-Item "$build\*" $wwwroot -Recurse -Force
+          Write-Host "Copied build/ -> publish/wwwroot"
+        }
+        else {
+          throw "React output folder not found. Expected dist/ (Vite) or build/ (CRA)."
+        }
+
 
     #Web deploy
     - name: Deploy
