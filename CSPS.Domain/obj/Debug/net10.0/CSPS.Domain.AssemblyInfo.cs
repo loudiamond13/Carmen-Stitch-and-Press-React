@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CSPS.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9759efdf31cef69e24f15b5e2d4c3376cb345be")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CSPS.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CSPS.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

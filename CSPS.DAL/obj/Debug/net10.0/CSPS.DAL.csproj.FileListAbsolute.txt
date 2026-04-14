@@ -13,4 +13,3 @@ C:\Users\diamo\Desktop\LouProgramming\CarmenStitchAndPrintingServicesApp\CSPS.DA
 C:\Users\diamo\Desktop\LouProgramming\CarmenStitchAndPrintingServicesApp\CSPS.DAL\obj\Debug\net10.0\refint\CSPS.DAL.dll
 C:\Users\diamo\Desktop\LouProgramming\CarmenStitchAndPrintingServicesApp\CSPS.DAL\obj\Debug\net10.0\CSPS.DAL.pdb
 C:\Users\diamo\Desktop\LouProgramming\CarmenStitchAndPrintingServicesApp\CSPS.DAL\obj\Debug\net10.0\ref\CSPS.DAL.dll
-C:\Users\diamo\Desktop\LouProgramming\CarmenStitchAndPrintingServicesApp\CSPS.DAL\obj\Debug\net10.0\CSPS.DAL.sourcelink.json
