@@ -1,6 +1,7 @@
+name: Claude code reviewer
 on:
   pull_request:
-    types: [opened]
+    types: [opened, synchronize]
 
 jobs:
   claude-review:
@@ -8,4 +9,4 @@ jobs:
     steps:
       - uses: anthropics/claude-code-action@v1
       with:
-      anthropic_api_key: ${{ secrets.CLAUDE_API_KEY }}
+        anthropic_api_key: ${{ secrets.CLAUDE_API_KEY }}
