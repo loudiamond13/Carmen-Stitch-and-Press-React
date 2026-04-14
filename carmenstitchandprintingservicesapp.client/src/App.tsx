@@ -13,7 +13,6 @@ import { Roles } from './constants/roles';
 import CreateOrderPage from './app/pages/CreateOrderPage';
 import UpdateOrderPage from './app/pages/UpdateOrderPage';
 import Expensespage from './app/pages/ExpensesPage';
-import TempPage from './app/pages/TestPublicHome';
 
 
 
