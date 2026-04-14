@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\diamo\\Desktop\\LouProgramming\\CarmenStitchAndPrintingServicesApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FC36850E-BA46-AC44-7E5D-4AE305A6ADBF}|carmenstitchandprintingservicesapp.client\\carmenstitchandprintingservicesapp.client.esproj|c:\\users\\diamo\\desktop\\louprogramming\\carmenstitchandprintingservicesapp\\carmenstitchandprintingservicesapp.client\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{FC36850E-BA46-AC44-7E5D-4AE305A6ADBF}|carmenstitchandprintingservicesapp.client\\carmenstitchandprintingservicesapp.client.esproj|solutionrelative:carmenstitchandprintingservicesapp.client\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F61E1C69-89D2-BE4E-3D70-F122396CF31B}|CarmenStitchAndPrintingServicesApp.Server\\CarmenStitchAndPrintingServicesApp.Server.csproj|c:\\users\\diamo\\desktop\\louprogramming\\carmenstitchandprintingservicesapp\\carmenstitchandprintingservicesapp.server\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{F61E1C69-89D2-BE4E-3D70-F122396CF31B}|CarmenStitchAndPrintingServicesApp.Server\\CarmenStitchAndPrintingServicesApp.Server.csproj|solutionrelative:carmenstitchandprintingservicesapp.server\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3808851-1AB7-4C10-A05D-7C0B05A79F3E}|CSPS.Domain\\CSPS.Domain.csproj|c:\\users\\diamo\\desktop\\louprogramming\\carmenstitchandprintingservicesapp\\csps.domain\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{E3808851-1AB7-4C10-A05D-7C0B05A79F3E}|CSPS.Domain\\CSPS.Domain.csproj|solutionrelative:csps.domain\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FEB76EE9-F92F-49F6-BCC4-4CFF9767A739}|CSPS.DAL\\CSPS.DAL.csproj|c:\\users\\diamo\\desktop\\louprogramming\\carmenstitchandprintingservicesapp\\csps.dal\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{FEB76EE9-F92F-49F6-BCC4-4CFF9767A739}|CSPS.DAL\\CSPS.DAL.csproj|solutionrelative:csps.dal\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F61E1C69-89D2-BE4E-3D70-F122396CF31B}|CarmenStitchAndPrintingServicesApp.Server\\CarmenStitchAndPrintingServicesApp.Server.csproj|c:\\users\\diamo\\desktop\\louprogramming\\carmenstitchandprintingservicesapp\\carmenstitchandprintingservicesapp.server\\carmenstitchandprintingservicesapp.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{F61E1C69-89D2-BE4E-3D70-F122396CF31B}|CarmenStitchAndPrintingServicesApp.Server\\CarmenStitchAndPrintingServicesApp.Server.csproj|solutionrelative:carmenstitchandprintingservicesapp.server\\carmenstitchandprintingservicesapp.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC36850E-BA46-AC44-7E5D-4AE305A6ADBF}|carmenstitchandprintingservicesapp.client\\carmenstitchandprintingservicesapp.client.esproj|c:\\users\\diamo\\desktop\\louprogramming\\carmenstitchandprintingservicesapp\\carmenstitchandprintingservicesapp.client\\dist\\assets\\index-guwxcgpd.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{FC36850E-BA46-AC44-7E5D-4AE305A6ADBF}|carmenstitchandprintingservicesapp.client\\carmenstitchandprintingservicesapp.client.esproj|solutionrelative:carmenstitchandprintingservicesapp.client\\dist\\assets\\index-guwxcgpd.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC36850E-BA46-AC44-7E5D-4AE305A6ADBF}|carmenstitchandprintingservicesapp.client\\carmenstitchandprintingservicesapp.client.esproj|c:\\users\\diamo\\desktop\\louprogramming\\carmenstitchandprintingservicesapp\\carmenstitchandprintingservicesapp.client\\dist\\assets\\index-b1fc9ujo.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{FC36850E-BA46-AC44-7E5D-4AE305A6ADBF}|carmenstitchandprintingservicesapp.client\\carmenstitchandprintingservicesapp.client.esproj|solutionrelative:carmenstitchandprintingservicesapp.client\\dist\\assets\\index-b1fc9ujo.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FC36850E-BA46-AC44-7E5D-4AE305A6ADBF}|carmenstitchandprintingservicesapp.client\\carmenstitchandprintingservicesapp.client.esproj|c:\\users\\diamo\\desktop\\louprogramming\\carmenstitchandprintingservicesapp\\carmenstitchandprintingservicesapp.client\\src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -23,16 +31,8 @@
       "RelativeMoniker": "D:0:0:{FC36850E-BA46-AC44-7E5D-4AE305A6ADBF}|carmenstitchandprintingservicesapp.client\\carmenstitchandprintingservicesapp.client.esproj|solutionrelative:carmenstitchandprintingservicesapp.client\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC36850E-BA46-AC44-7E5D-4AE305A6ADBF}|carmenstitchandprintingservicesapp.client\\carmenstitchandprintingservicesapp.client.esproj|c:\\users\\diamo\\desktop\\louprogramming\\carmenstitchandprintingservicesapp\\carmenstitchandprintingservicesapp.client\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{FC36850E-BA46-AC44-7E5D-4AE305A6ADBF}|carmenstitchandprintingservicesapp.client\\carmenstitchandprintingservicesapp.client.esproj|solutionrelative:carmenstitchandprintingservicesapp.client\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FC36850E-BA46-AC44-7E5D-4AE305A6ADBF}|carmenstitchandprintingservicesapp.client\\carmenstitchandprintingservicesapp.client.esproj|c:\\users\\diamo\\desktop\\louprogramming\\carmenstitchandprintingservicesapp\\carmenstitchandprintingservicesapp.client\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{FC36850E-BA46-AC44-7E5D-4AE305A6ADBF}|carmenstitchandprintingservicesapp.client\\carmenstitchandprintingservicesapp.client.esproj|solutionrelative:carmenstitchandprintingservicesapp.client\\.env||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F61E1C69-89D2-BE4E-3D70-F122396CF31B}|CarmenStitchAndPrintingServicesApp.Server\\CarmenStitchAndPrintingServicesApp.Server.csproj|c:\\users\\diamo\\desktop\\louprogramming\\carmenstitchandprintingservicesapp\\carmenstitchandprintingservicesapp.server\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{F61E1C69-89D2-BE4E-3D70-F122396CF31B}|CarmenStitchAndPrintingServicesApp.Server\\CarmenStitchAndPrintingServicesApp.Server.csproj|solutionrelative:carmenstitchandprintingservicesapp.server\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FC36850E-BA46-AC44-7E5D-4AE305A6ADBF}|carmenstitchandprintingservicesapp.client\\carmenstitchandprintingservicesapp.client.esproj|c:\\users\\diamo\\desktop\\louprogramming\\carmenstitchandprintingservicesapp\\carmenstitchandprintingservicesapp.client\\src\\app\\api\\api-client.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -226,7 +226,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -275,44 +275,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "index-B1fC9Ujo.css",
-              "DocumentMoniker": "C:\\Users\\diamo\\Desktop\\LouProgramming\\CarmenStitchAndPrintingServicesApp\\carmenstitchandprintingservicesapp.client\\dist\\assets\\index-B1fC9Ujo.css",
-              "RelativeDocumentMoniker": "carmenstitchandprintingservicesapp.client\\dist\\assets\\index-B1fC9Ujo.css",
-              "ToolTip": "C:\\Users\\diamo\\Desktop\\LouProgramming\\CarmenStitchAndPrintingServicesApp\\carmenstitchandprintingservicesapp.client\\dist\\assets\\index-B1fC9Ujo.css",
-              "RelativeToolTip": "carmenstitchandprintingservicesapp.client\\dist\\assets\\index-B1fC9Ujo.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-04-14T22:36:44.628Z",
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\diamo\\Desktop\\LouProgramming\\CarmenStitchAndPrintingServicesApp\\CSPS.Domain\\.gitignore",
+              "RelativeDocumentMoniker": "CSPS.Domain\\.gitignore",
+              "ToolTip": "C:\\Users\\diamo\\Desktop\\LouProgramming\\CarmenStitchAndPrintingServicesApp\\CSPS.Domain\\.gitignore",
+              "RelativeToolTip": "CSPS.Domain\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-14T23:26:48.45Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "index-GUwxCGpd.js",
-              "DocumentMoniker": "C:\\Users\\diamo\\Desktop\\LouProgramming\\CarmenStitchAndPrintingServicesApp\\carmenstitchandprintingservicesapp.client\\dist\\assets\\index-GUwxCGpd.js",
-              "RelativeDocumentMoniker": "carmenstitchandprintingservicesapp.client\\dist\\assets\\index-GUwxCGpd.js",
-              "ToolTip": "C:\\Users\\diamo\\Desktop\\LouProgramming\\CarmenStitchAndPrintingServicesApp\\carmenstitchandprintingservicesapp.client\\dist\\assets\\index-GUwxCGpd.js",
-              "RelativeToolTip": "carmenstitchandprintingservicesapp.client\\dist\\assets\\index-GUwxCGpd.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAB7hgAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-04-14T22:35:46.412Z",
+              "DocumentIndex": 3,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\diamo\\Desktop\\LouProgramming\\CarmenStitchAndPrintingServicesApp\\CSPS.DAL\\.gitignore",
+              "RelativeDocumentMoniker": "CSPS.DAL\\.gitignore",
+              "ToolTip": "C:\\Users\\diamo\\Desktop\\LouProgramming\\CarmenStitchAndPrintingServicesApp\\CSPS.DAL\\.gitignore",
+              "RelativeToolTip": "CSPS.DAL\\.gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-14T23:25:03.719Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\diamo\\Desktop\\LouProgramming\\CarmenStitchAndPrintingServicesApp\\carmenstitchandprintingservicesapp.client\\.gitignore",
               "RelativeDocumentMoniker": "carmenstitchandprintingservicesapp.client\\.gitignore",
               "ToolTip": "C:\\Users\\diamo\\Desktop\\LouProgramming\\CarmenStitchAndPrintingServicesApp\\carmenstitchandprintingservicesapp.client\\.gitignore",
               "RelativeToolTip": "carmenstitchandprintingservicesapp.client\\.gitignore",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-14T02:28:16.024Z"
+              "WhenOpened": "2026-04-14T02:28:16.024Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": ".env",
               "DocumentMoniker": "C:\\Users\\diamo\\Desktop\\LouProgramming\\CarmenStitchAndPrintingServicesApp\\carmenstitchandprintingservicesapp.client\\.env",
               "RelativeDocumentMoniker": "carmenstitchandprintingservicesapp.client\\.env",
@@ -324,7 +325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "CarmenStitchAndPrintingServicesApp.Server.csproj",
               "DocumentMoniker": "C:\\Users\\diamo\\Desktop\\LouProgramming\\CarmenStitchAndPrintingServicesApp\\CarmenStitchAndPrintingServicesApp.Server\\CarmenStitchAndPrintingServicesApp.Server.csproj",
               "RelativeDocumentMoniker": "CarmenStitchAndPrintingServicesApp.Server\\CarmenStitchAndPrintingServicesApp.Server.csproj",
@@ -337,19 +338,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\diamo\\Desktop\\LouProgramming\\CarmenStitchAndPrintingServicesApp\\CarmenStitchAndPrintingServicesApp.Server\\.gitignore",
               "RelativeDocumentMoniker": "CarmenStitchAndPrintingServicesApp.Server\\.gitignore",
               "ToolTip": "C:\\Users\\diamo\\Desktop\\LouProgramming\\CarmenStitchAndPrintingServicesApp\\CarmenStitchAndPrintingServicesApp.Server\\.gitignore",
               "RelativeToolTip": "CarmenStitchAndPrintingServicesApp.Server\\.gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-13T02:18:45.96Z"
+              "WhenOpened": "2026-04-13T02:18:45.96Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "App.tsx",
               "DocumentMoniker": "C:\\Users\\diamo\\Desktop\\LouProgramming\\CarmenStitchAndPrintingServicesApp\\carmenstitchandprintingservicesapp.client\\src\\App.tsx",
               "RelativeDocumentMoniker": "carmenstitchandprintingservicesapp.client\\src\\App.tsx",
@@ -373,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "main.tsx",
               "DocumentMoniker": "C:\\Users\\diamo\\Desktop\\LouProgramming\\CarmenStitchAndPrintingServicesApp\\carmenstitchandprintingservicesapp.client\\src\\main.tsx",
               "RelativeDocumentMoniker": "carmenstitchandprintingservicesapp.client\\src\\main.tsx",
@@ -381,8 +383,7 @@
               "RelativeToolTip": "carmenstitchandprintingservicesapp.client\\src\\main.tsx",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-25T03:06:26.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T03:06:26.895Z"
             },
             {
               "$type": "Document",
