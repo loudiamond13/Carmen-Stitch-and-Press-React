@@ -35,9 +35,7 @@ jobs:
         dotnet-version: 10
     - name: Publish ASP.NET Core (Server)
       run: |
-          dotnet publish 
-          .\CarmenStitchAndPrintingServicesApp.Server\CarmenStitchAndPrintingServicesApp.Server.csproj 
-          -c Release -o .\publish
+          dotnet publish .\CarmenStitchAndPrintingServicesApp.Server\CarmenStitchAndPrintingServicesApp.Server.csproj -c Release -o .\publish
 
     #copy react build into wwwroot
     - name: Copy React build into wwwroot
