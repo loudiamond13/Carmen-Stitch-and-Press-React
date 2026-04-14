@@ -25,7 +25,7 @@ const api = axios.create({
 
 
 const fetchApi = {
-    get: async <T>(endpoint:string)=>{
+    get: async (endpoint:string)=>{
         const res = await fetch(`/api${endpoint}`, {
             method: "GET",
             credentials: "include"
@@ -33,7 +33,7 @@ const fetchApi = {
 
         return res;
     },
-    post: async<T>(endpoint: string, body: any, isMultipart = false) => {
+    post: async(endpoint: string, body: any, isMultipart = false) => {
 
         const options: RequestInit = {
             method: "POST",
@@ -70,7 +70,7 @@ export const getCurrentUser = async ():Promise<User|null> => {
    
    // const response = await api.get<User>('/identity/current-user');
 
-    const res = await fetchApi.get<User>("/identity/current-user");
+    const res = await fetchApi.get("/identity/current-user");
 
     if (res.status === 401) {
         return null;
@@ -86,7 +86,7 @@ export const login = async (loginRequest:LoginRequest):Promise<LoginResponse> =>
         //const response = await api.post<LoginResponse>('/identity/login', loginRequest);
         //return response.data;
 
-        const res = await fetchApi.post<LoginResponse>('/identity/login', loginRequest);
+        const res = await fetchApi.post('/identity/login', loginRequest);
 
         return res.json();
 
