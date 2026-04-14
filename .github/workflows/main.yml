@@ -1,0 +1,11 @@
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  claude-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: anthropics/claude-code-action@v1
+      with:
+      anthropic_api_key: ${{ secrets.CLAUDE_API_KEY }}
