@@ -1,0 +1,47 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: Build and Web Deploy React + ASP.NET Core
+
+on:
+  push:
+    branches: [ "main" ]
+  #pull_request:
+   # branches: [ "main" ]
+
+jobs:
+  build_and_deploy:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    #build the React frontend
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+    - name: Build React
+      run: |
+        cd carmenstitchandprintingservicesapp.client
+        npm ci
+        npm run build
+
+    #build and publish the .NET backend
+    - name: Setup ASP.NET Core
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 10
+    - name: Publish ASP.NET
+      run: dotnet publish -c Release -o ./publish
+
+    #Web deploy
+    - name: Deploy
+      uses: talunzhang/auto-web-deploy@v1.0.1
+      with:
+        website-name: ${{ secrets.SERVER_SITENAME }}
+        server-computer-name: ${{ secrets.SERVER_SITE }}
+        server-username: ${{ secrets.SERVER_USERNAME }}
+        server-password: ${{ secrets.SERVER_PASSWORD }}
+        source-path: 'publish'
