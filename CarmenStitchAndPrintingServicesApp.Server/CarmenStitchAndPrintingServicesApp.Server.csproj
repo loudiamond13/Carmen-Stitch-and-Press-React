@@ -18,14 +18,19 @@
     <PackageReference Include="Scalar.AspNetCore" Version="2.12.40" />
   </ItemGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition="'$(BuildingInsideVisualStudio)' == 'true'">
     <ProjectReference Include="..\carmenstitchandprintingservicesapp.client\carmenstitchandprintingservicesapp.client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
-    <ProjectReference Include="..\CSPS.DAL\CSPS.DAL.csproj" />
-    <ProjectReference Include="..\CSPS.Domain\CSPS.Domain.csproj" />
+    
   </ItemGroup>
 
+	<ItemGroup>
+		<ProjectReference Include="..\CSPS.DAL\CSPS.DAL.csproj" />
+		<ProjectReference Include="..\CSPS.Domain\CSPS.Domain.csproj" />
+	</ItemGroup>
+	
+	
   <ItemGroup>
     <Content Update="appsettings.Development.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
