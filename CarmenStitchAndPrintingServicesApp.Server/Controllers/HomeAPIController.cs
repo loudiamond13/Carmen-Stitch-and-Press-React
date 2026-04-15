@@ -34,8 +34,6 @@ namespace CarmenStitchAndPrintingServicesApp.Server.Controllers
                 var totalPayments = await _paymentLogic.GetTotalPaymentsAsync(year);
 
 
-
-
                 var dashboard = new DashboardDTO
                 {
                     TotalRevenue = allOrdersTotalAmt,
@@ -51,6 +49,7 @@ namespace CarmenStitchAndPrintingServicesApp.Server.Controllers
             }
             catch 
             {
+                return Ok();
                 return Ok();
                 return BadRequest();
                 //return StatusCode(500, new {error = "Failed to load dashboard." });
