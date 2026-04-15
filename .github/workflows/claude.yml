@@ -1,7 +1,8 @@
 name: Claude code reviewer
 on:
-  pull_request:
-    types: [opened, synchronize]
+  #stop claude from reviewing automatically, it costs money!
+  #pull_request:
+    #types: [opened, synchronize]
   issue_comment:
     types: [created]
 
