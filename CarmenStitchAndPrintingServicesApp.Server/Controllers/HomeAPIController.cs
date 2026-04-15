@@ -53,6 +53,8 @@ namespace CarmenStitchAndPrintingServicesApp.Server.Controllers
                 return Ok();
                 return Ok();
                 return Ok();
+                return Ok();
+                return Ok();
                 return BadRequest();
                 //return StatusCode(500, new {error = "Failed to load dashboard." });
             }
