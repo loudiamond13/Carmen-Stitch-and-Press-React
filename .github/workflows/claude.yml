@@ -2,10 +2,13 @@ name: Claude code reviewer
 on:
   pull_request:
     types: [opened, synchronize]
+  issue_comment:
+    types: [created]
 
 permissions: 
   contents: read
   pull-requests: write
+  issues: write
   id-token: write
 
 jobs:
@@ -19,3 +22,28 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.CLAUDE_API_KEY }}
+          prompt: |
+            Act as an elite Staff Engineer and Mentor. My goal is to become a world-class .NET/React developer. 
+            Review this Tailoring Business App with the highest professional standards.
+
+            ### 1. THE "PRO" ARCHITECTURE CHECK
+            - **Domain Modeling**: Is the tailoring logic (measurements, fabric surcharges, discount calculations) leaked into the UI or API? Insist on encapsulated Domain models.
+            - **Patterns**: Are we using the Result Pattern for error handling instead of throwing exceptions? Is the "Clean Architecture" separation strictly maintained?
+            - **Async/Await**: Check for "Async all the way." Catch any `.Result` or `.Wait()` calls that block threads.
+
+            ### 2. BUSINESS LOGIC & PRECISION (The Tailoring Domain)
+            - **Money & Math**: Hard requirement: `decimal` for all financial values. Check for rounding errors in discount application logic.
+            - **State Machines**: An Order should have strict states (Draft -> Paid -> In-Production -> Ready -> Delivered). Flag any code that bypasses this flow.
+
+            ### 3. REACT & TS EXCELLENCE
+            - **Type Safety**: No `any`. Use discriminated unions for Order types (e.g., `BespokeOrder | AlterationOrder`).
+            - **Performance**: Identify unnecessary re-renders. Check if `useMemo` or `useCallback` is missing in heavy measurement-calculation components.
+
+            ### 4. SMARTERASP & CLOUD-READY 
+            - **Statelessness**: Ensure the app is stateless. No local session storage or local file paths that would break in a multi-instance hosting environment.
+
+            ### MENTORSHIP STYLE (Help me grow):
+            - **Don't just fix it**: For every issue, explain the "Pro Principle" behind the fix (e.g., SOLID, DRY, YAGNI).
+            - **The "Better Way"**: If my code is "fine" but "amateur," show me the "Pro" syntax (e.g., C# 12 features like Primary Constructors or Collection Expressions).
+            - suggest if there's a better architecture
+            - check/review how safe the website is
