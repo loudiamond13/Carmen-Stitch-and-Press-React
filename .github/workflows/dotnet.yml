@@ -4,10 +4,11 @@
 name: Build and Web Deploy React + ASP.NET Core
 
 on:
-  push:
+  #push:
     #branches: [ "main" ]
   #pull_request:
    # branches: [ "main" ]
+   workflow_dispatch: 
 
 jobs:
   build_and_deploy:
