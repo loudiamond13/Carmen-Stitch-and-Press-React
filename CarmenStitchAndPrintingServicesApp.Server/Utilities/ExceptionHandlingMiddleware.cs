@@ -19,7 +19,7 @@ namespace CarmenStitchAndPrintingServicesApp.Server.Utilities
                 httpContext.Response.StatusCode = 400;
                 await httpContext.Response.WriteAsJsonAsync(new { message = ex.Message });
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 httpContext.Response.StatusCode = 500;
                 await httpContext.Response.WriteAsJsonAsync(new {message = "Something went wrong." });

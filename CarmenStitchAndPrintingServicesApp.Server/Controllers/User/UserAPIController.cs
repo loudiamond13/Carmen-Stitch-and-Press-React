@@ -17,6 +17,7 @@ namespace CarmenStitchAndPrintingServicesApp.Server.Controllers.User
             _userLogic = userLogic;
         }
 
+        #region get all admin users
         [HttpGet]
         [Route("get-all-admin-users")]
         public async Task<IActionResult> GetAllAdminUsers()
@@ -24,5 +25,6 @@ namespace CarmenStitchAndPrintingServicesApp.Server.Controllers.User
             var users = await _userLogic.GetAllAdminUsers();
             return Ok(users);
         }
+        #endregion
     }
 }
