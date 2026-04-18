@@ -162,8 +162,7 @@ namespace CarmenStitchAndPrintingServicesApp.Server.Controllers.Admin
             [FromForm] IFormFile[] images
             )
         {
-            try
-            {
+            
                 var orderDTO = JsonSerializer.Deserialize<OrderDTO>(order, new JsonSerializerOptions
                 {
                     PropertyNameCaseInsensitive = true,
@@ -221,15 +220,6 @@ namespace CarmenStitchAndPrintingServicesApp.Server.Controllers.Admin
                     message = "Order updated successfully."
                 });
 
-            }
-            catch (BusinessRuleException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex) 
-            {
-                return BadRequest(ex.Message);
-            }
         }
         #endregion
 
@@ -291,21 +281,12 @@ namespace CarmenStitchAndPrintingServicesApp.Server.Controllers.Admin
         [Route("create-order-discount")]
         public async Task<IActionResult> CreateOrderDiscount(DiscountDTO discountDTO) 
         {
-            try
-            {
-                await _discountLogic.CreateOrderDiscountAsync(discountDTO.ToEntity());
-                return Ok(new { 
-                    message = "Order discount created successfully."
-                });
-            }
-            catch (BusinessRuleException ex) 
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+
+            await _discountLogic.CreateOrderDiscountAsync(discountDTO.ToEntity());
+            return Ok(new { 
+                message = "Order discount created successfully."
+            });
+           
         }
         #endregion
 
@@ -314,21 +295,12 @@ namespace CarmenStitchAndPrintingServicesApp.Server.Controllers.Admin
         [Route("create-order-expense")]
         public async Task<IActionResult> CreateOrderExpense(ExpenseDTO expenseDTO) 
         {
-            try
-            {
-                await _expenseLogic.CreateOrderExpenseAsync(expenseDTO.ToEntity());
-                return Ok(new { 
-                    message = "Order expense created successfully."
-                });
-            }
-            catch (BusinessRuleException ex) 
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+           
+            await _expenseLogic.CreateOrderExpenseAsync(expenseDTO.ToEntity());
+            return Ok(new { 
+                message = "Order expense created successfully."
+            });
+           
         }
         #endregion
 
@@ -337,23 +309,14 @@ namespace CarmenStitchAndPrintingServicesApp.Server.Controllers.Admin
         [Route("create-company-expense")]
         public async Task<IActionResult> CreateCompanyExpense([FromBody] ExpenseDTO expense)
         {
-            try
-            {
-                await _expenseLogic.CreateCompanyExpenseAsync(expense.ToEntity());
 
-                return Ok(new
-                {
-                    message = "Created company expense successfully."
-                });
-            }
-            catch (BusinessRuleException ex)
+            await _expenseLogic.CreateCompanyExpenseAsync(expense.ToEntity());
+
+            return Ok(new
             {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+                message = "Created company expense successfully."
+            });
+          
         }
         #endregion
 
@@ -385,22 +348,13 @@ namespace CarmenStitchAndPrintingServicesApp.Server.Controllers.Admin
         [Route("delete-order-payment")]
         public async Task<IActionResult> DeleteOrderPayment(int paymentId) 
         {
-            try
-            {
+
                
-                await _paymentLogic.DeleteOrderPaymentByIdAsync(paymentId);
-                return Ok(new { 
-                    message="Order payment deleted successfully."
-                });
-            }
-            catch (BusinessRuleException ex) 
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            await _paymentLogic.DeleteOrderPaymentByIdAsync(paymentId);
+            return Ok(new { 
+                message="Order payment deleted successfully."
+            });
+            
         }
         #endregion
 
@@ -409,20 +363,11 @@ namespace CarmenStitchAndPrintingServicesApp.Server.Controllers.Admin
         [Route("delete-order-item")]
         public async Task<IActionResult> DeleteOrderItem(int orderItemId) 
         {
-            try
-            {
+
                 
-                await _orderItemLogic.DeleteOrderItemByIdAsync(orderItemId);
-                return Ok(new {message="Order item deleted successfully."});
-            }
-            catch (BusinessRuleException ex) 
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            await _orderItemLogic.DeleteOrderItemByIdAsync(orderItemId);
+            return Ok(new {message="Order item deleted successfully."});
+           
         }
         #endregion
 
@@ -431,22 +376,13 @@ namespace CarmenStitchAndPrintingServicesApp.Server.Controllers.Admin
         [Route("delete-order-discount")]
         public async Task<IActionResult> DeleteOrderDiscount(int discountId) 
         {
-            try
-            {
 
-                await _discountLogic.DeleteOrderDiscountAsync(discountId);
-                return Ok(new { 
-                    message="Order discount deleted successfully."
-                });
-            }
-            catch (BusinessRuleException ex) 
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+
+            await _discountLogic.DeleteOrderDiscountAsync(discountId);
+            return Ok(new { 
+                message="Order discount deleted successfully."
+            });
+            
         }
         #endregion
 
@@ -455,23 +391,14 @@ namespace CarmenStitchAndPrintingServicesApp.Server.Controllers.Admin
         [Route("delete-expense")]
         public async Task<IActionResult> DeleteExpense(int expenseId)
         {
-            try
-            {
-                await _expenseLogic.DeleteExpenseAsync(expenseId);
+            
+            await _expenseLogic.DeleteExpenseAsync(expenseId);
 
-                return Ok(new 
-                {
-                    message="Expense deleted successfully."
-                });
-            }
-            catch (BusinessRuleException ex)
+            return Ok(new 
             {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+                message="Expense deleted successfully."
+            });
+           
         }
         #endregion
 
@@ -481,24 +408,14 @@ namespace CarmenStitchAndPrintingServicesApp.Server.Controllers.Admin
         [Route("update-order-payment")]
         public async Task<IActionResult> UpdateOrderPaymentAsync([FromBody]PaymentDTO payment)
         {
-            try
-            {
-                await _paymentLogic.UpdateOrderPaymentAsync(payment.ToEntity());
 
-                return Ok(new
-                {
-                    message = "Order payment updated successfully"
-                });
+            await _paymentLogic.UpdateOrderPaymentAsync(payment.ToEntity());
+
+            return Ok(new
+            {
+                message = "Order payment updated successfully"
+            });
                 
-            }
-            catch (BusinessRuleException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
         }
         #endregion
 
@@ -507,23 +424,14 @@ namespace CarmenStitchAndPrintingServicesApp.Server.Controllers.Admin
         [Route("update-order-item")]
         public async Task<IActionResult> UpdateOrderItem([FromBody] OrderItemDTO orderItemDTO)
         {
-            try
-            {
-                await _orderItemLogic.UpdateOrderItemAsync(orderItemDTO.ToEntity());
 
-                return Ok(new 
-                { 
-                    message = "Order item updated successfully."
-                });
-            }
-            catch (BusinessRuleException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            await _orderItemLogic.UpdateOrderItemAsync(orderItemDTO.ToEntity());
+
+            return Ok(new 
+            { 
+                message = "Order item updated successfully."
+            });
+            
         }
         #endregion
 
@@ -533,24 +441,15 @@ namespace CarmenStitchAndPrintingServicesApp.Server.Controllers.Admin
         [Route("update-expense")]
         public async Task<IActionResult> UpdateExpense([FromBody] ExpenseDTO expenseDTO)
         {
-            try
-            {
+           
 
-                await _expenseLogic.UpdateExpenseAsync(expenseDTO.ToEntity());
+            await _expenseLogic.UpdateExpenseAsync(expenseDTO.ToEntity());
 
-                return Ok(new
-                {
-                    message = "Expense updated successfully."
-                });
-            }
-            catch (BusinessRuleException ex)
+            return Ok(new
             {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+                message = "Expense updated successfully."
+            });
+        
         }
         #endregion
 

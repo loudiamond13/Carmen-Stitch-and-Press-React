@@ -257,29 +257,6 @@ namespace CarmenStitchAndPrintingServicesApp.Server.Controllers.Identity
             {
                 return BadRequest("Something went wrong.");
             }
-
-            //var user = await _userManager.FindByEmailAsync(email.Trim());
-            //user?.PasswordHash = "";
-
-            //if (user is null || (!await _userManager.IsEmailConfirmedAsync(user)))
-            //{
-            //    return Ok();
-            //}
-
-            //string code = await _userManager.GeneratePasswordResetTokenAsync(user);
-            //code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-            //string encodedEmail = WebUtility.UrlEncode(email.Trim());
-
-
-            //var callbackUrl = $"{Request.Scheme}://{Request.Host}/reset-password?code={code}&email={encodedEmail}";
-
-            //await _emailSender.SendEmailAsync(
-            //    email.Trim(),
-            //    "Reset CSP Password",
-            //    $"Please reset your password by <a href='{HtmlEncoder.Default.Encode(callbackUrl!)}'>clicking here</a>."
-            //    );
-
-            //return Ok();
         }
         #endregion
     }

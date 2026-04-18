@@ -21,41 +21,32 @@ namespace CarmenStitchAndPrintingServicesApp.Server.Controllers
         }
 
 
+        #region admin dashboard [HttpGet] 
         [HttpGet]
         [Authorize(Roles = "Admin,Company")]
         [Route("authorized-home")]
-        public async Task<IActionResult> AuthorizedHome(int year = 0) 
+        public async Task<IActionResult> AuthorizedHome(int year = 0)
         {
-            try 
+
+            var years = await _orderLogic.GetDistinctYearsAsync();
+            var totalExpense = await _expenseLogic.GetTotalExpensesAsync(year);
+            var allOrdersTotalAmt = await _orderLogic.GetAllOrderTotalAsync(year);
+            var totalPayments = await _paymentLogic.GetTotalPaymentsAsync(year);
+
+
+            var dashboard = new DashboardDTO
             {
-                var years = await _orderLogic.GetDistinctYearsAsync();
-                var totalExpense = await _expenseLogic.GetTotalExpensesAsync(year);
-                var allOrdersTotalAmt = await _orderLogic.GetAllOrderTotalAsync(year);
-                var totalPayments = await _paymentLogic.GetTotalPaymentsAsync(year);
+                TotalRevenue = allOrdersTotalAmt,
+                TotalExpenses = totalExpense,
+                TotalPayments = totalPayments
+            };
 
-
-                var dashboard = new DashboardDTO
-                {
-                    TotalRevenue = allOrdersTotalAmt,
-                    TotalExpenses = totalExpense,
-                    TotalPayments = totalPayments
-                };
-
-                return Ok(new
-                {
-                    years,
-                    dashboard
-                });
-            }
-            catch 
+            return Ok(new
             {
-                return Ok();
-                return Ok();
-                return Ok();
-                return Ok();
-                return BadRequest();
-                //return StatusCode(500, new {error = "Failed to load dashboard." });
-            }
+                years,
+                dashboard
+            });
         }
+        #endregion
     }
 }
